@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthyLifeApp.Views.MainPage"
+             Title="{Binding Title}"
+             BackgroundColor="Gainsboro">
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding UserInformation.Name}"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="logo.png" Order="Primary"></ToolbarItem>
+        <ToolbarItem Text="Healthy Life" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <FlexLayout BackgroundColor="LightSeaGreen" HeightRequest="100" JustifyContent="SpaceBetween" Padding="10, 20, 10, 10" Margin="0, 5, 0, 0 ">
+            <StackLayout Orientation="Vertical">
+                <Image Source="schedule.png"/>
+                <Label Text="Schedule"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Image Source="article.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Articles}">
+                            
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Articles"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Image Source="diet.png"/>
+                <Label Text="Your Diet"/>
+                
+               
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Image Source="exercise.png">
+                    
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToExercise}">
+                            
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Exercise"/>
+            </StackLayout>
+
+        </FlexLayout>
+        <FlexLayout JustifyContent="Center" BackgroundColor="WhiteSmoke" HeightRequest="70" AlignItems="Center">
+            <Label Text="Today," FontSize="30" Margin="10"/>
+            <Label Text="{Binding UserInformation.Date}" FontSize="30" Margin="10"/>
+        </FlexLayout>
+
+        <ListView ItemsSource="{Binding ScheduleProperty}" RowHeight="70">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*">
+                                    
+                                </ColumnDefinition>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="task.png" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="{Binding Task}" FontSize="22" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="{Binding TaskDetails}" FontSize="19" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="{Binding Time}" Grid.Column="2" Grid.Row="0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        <Button Text="Add New Task" CornerRadius="20" BackgroundColor="Aqua" />
+        <FlexLayout JustifyContent="SpaceBetween" BackgroundColor="LightSeaGreen" HeightRequest="70" Padding="10, 20, 10, 10" Margin="0, 5, 0, 5 " AlignItems="Center">
+            <StackLayout>
+                <Image Source="journal.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToJournal}">
+                            
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Journal"/>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="history.png"/>
+                <Label Text="Activity History"/>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="logout.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Logout}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                <Label Text="Logout"/>
+            </StackLayout>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

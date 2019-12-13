@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HealthyLifeApp.Views.SignUpPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Be Healthy"/>
+        
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="20">
+        <Label Text="Sign Up" HorizontalOptions="Center"/>
+
+        
+            
+                <StackLayout>
+                    <Label Text="Name"/>
+                    <Entry Placeholder="Name and Surname" Text="{Binding UserInformation.Name}"/>
+                    <Label Text="Email"/>
+                    <Entry Text="{Binding UserInformation.Email}" Placeholder="Email"/>
+                </StackLayout>
+
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <Label Text="Password"/>
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding UserInformation.Password}"/>
+            </StackLayout>
+
+
+
+            <StackLayout>
+                <Label Text="Confirm Password"/>
+                <Entry Placeholder="Confirm Password" IsPassword="True" Text="{Binding UserInformation.ConfirmPassword}"/>
+            </StackLayout>
+        </FlexLayout>
+                
+            <StackLayout>
+                <Label Text="Male" x:Name="Gender"/>
+                <Switch HorizontalOptions="Start" x:Name="SwitchGender" Toggled="SwitchGender_Toggled"/>
+            </StackLayout>
+      
+
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <Label Text="Age"/>
+                <Entry Placeholder="Your Age" Text="{Binding UserInformation.Age}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Weight"/>
+                <Entry Text="{Binding UserInformation.Weight}" Placeholder="Weight in kg"/>
+            </StackLayout>
+           
+        </FlexLayout>
+
+                <StackLayout>
+                    <Label Text="Dietary Restriction"/>
+                    <Entry Placeholder="Hobbies" Text="{Binding UserInformation.DietaryRestrictions}"/>
+                </StackLayout>
+
+        <StackLayout>
+            <Label Text="Hobbies"/>
+            <Entry Placeholder="Hobbies" Text="{Binding UserInformation.Hobbies}"/>
+        </StackLayout>
+
+        <Button Text="Submit" Command="{Binding SaveUser}"/>
+        </StackLayout>
+    
+</ContentPage>

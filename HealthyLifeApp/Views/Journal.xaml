@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HealthyLifeApp.Views.Journal"
+             BackgroundColor="Gainsboro">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Your Journal"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <StackLayout>
+            <Label Text="Your Wellbeing" TextColor="SkyBlue" FontSize="Large"/>
+            <Entry Placeholder="Whats on your mind?" HeightRequest="150" Text="{Binding JournalPosts.Post}"/>
+            <Button Text="Submit" Command="{Binding SavePost}"/>
+        </StackLayout>
+
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Label Text="How do you feel today?"/>
+            <FlexLayout HeightRequest="60" AlignItems="Center">
+                <Image Source="happy.png"/>
+                <Label Text="Happy"/>
+            </FlexLayout>
+            <FlexLayout  HeightRequest="60" AlignItems="Center">
+                <Image Source="neutral.png"/>
+                <Label Text="Meh"/>
+            </FlexLayout>
+            <FlexLayout  HeightRequest="60" AlignItems="Center">
+                <Image Source="angry.png"/>
+                <Label Text="Angry"/>
+            </FlexLayout>
+        </StackLayout>
+    </StackLayout>    
+</ContentPage>

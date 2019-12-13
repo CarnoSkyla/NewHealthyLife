@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HealthyLifeApp.Views.LoginPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Be Healthy"></ToolbarItem>
+        
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="20">
+        <Image Source="logo.png"/>
+        <Label Text="Live A Healthy Life" HorizontalOptions="Center"></Label>
+        
+
+        <StackLayout Orientation="Vertical">
+
+            <Label Text="Email" FontSize="Medium"/>
+            <Entry Placeholder="Your Email" x:Name="email" Text="{Binding Login.Email}"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Label Text="Password" FontSize="Medium"/>
+            <Entry Placeholder="Your Password" IsPassword="True" x:Name="password" Text="{Binding Login.Password}"></Entry>
+            <Button Text="Sign In" Command="{Binding ToMainPage}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label Text="Don't Have an Account? Please Sign Up" FontSize="Medium"/>
+            <Button Text="Sign Up" Command="{Binding ToSignUpPage}"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

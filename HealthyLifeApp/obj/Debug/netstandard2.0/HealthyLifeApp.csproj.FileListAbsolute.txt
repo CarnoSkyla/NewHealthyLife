@@ -1,0 +1,17 @@
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\bin\Debug\netstandard2.0\HealthyLifeApp.deps.json
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\bin\Debug\netstandard2.0\HealthyLifeApp.dll
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\bin\Debug\netstandard2.0\HealthyLifeApp.pdb
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\HealthyLifeApp.AssemblyInfoInputs.cache
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\HealthyLifeApp.AssemblyInfo.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\HealthyLifeApp.dll
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\HealthyLifeApp.pdb
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\SignUpPage.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\HealthyLifeApp.csprojAssemblyReference.cache
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\Exercise.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\Articles.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\ActivityHistory.xaml.g.cs
+C:\Xamarin\HealthyLifeApp\HealthyLifeApp\obj\Debug\netstandard2.0\Views\Journal.xaml.g.cs

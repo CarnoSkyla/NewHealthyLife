@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HealthyLifeApp.Views.Exercise">
+    <NavigationPage.TitleView>
+        <Label Text="Exercise" TextColor="Aqua" FontSize="20"/>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Label Text="Be Active" FontSize="20"/>
+        <StackLayout Orientation="Vertical" >
+            <FlexLayout JustifyContent="SpaceBetween" BackgroundColor="Aqua">
+                <Image Source="exercise.png">
+                    
+                </Image>
+         
+                <Button Text="Run" Command="{Binding StartLocation}"/>
+                <Button Text="Stop" Command="{Binding EndLocation}"/>
+                <Button Text="View Activity" Command="{Binding GetDistance}"/>
+            </FlexLayout>
+
+            <FlexLayout JustifyContent="SpaceBetween" BackgroundColor="Aquamarine">
+                <Image Source="walking.png">
+
+                </Image>
+
+                <Button Text="Walk" Command="{Binding StartLocation}"/>
+                <Button Text="Stop" Command="{Binding EndLocation}"/>
+                <Button Text="View Activity" Command="{Binding GetDistance}"/>
+            </FlexLayout>
+        </StackLayout>
+        <Label Text="{Binding CurrentTime}" TextColor="Green" FontSize="18"/>
+    </StackLayout>
+   
+</ContentPage>
