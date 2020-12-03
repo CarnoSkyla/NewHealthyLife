@@ -25,14 +25,6 @@ namespace HealthyLifeApp.ViewModels
         {
             NavigationService = navigationService;
 
-
-
-            // var web = new WebView();
-
-            // ContentPage = web;
-            // ContentPage.Source = "https://www.eufic.org/en/healthy-living/article/10-healthy-lifestyle-tips-for-adults";
-
-
             ContentUrl = "https://www.eufic.org/en/healthy-living/article/10-healthy-lifestyle-tips-for-adults";
         }
     }
