@@ -49,17 +49,13 @@ namespace HealthyLifeApp.ViewModels
 
        
 
-        async void ExecuteEndLocation()
-        {
-           
-            
-
-            CurrentTime += DateTime.Now.Minute.ToString();
+        async void ExecuteEndLocation() {
+        
+           CurrentTime += DateTime.Now.Minute.ToString();
 
             var startLocation = new Location(-33, 18);
             var endLocation = new Location(-33, 19);
             var distance = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers);
-        //    Exercise.Speed = distance / Int32.Parse(CurrentTime);
 
             var endTime = DateTime.Now;
 
@@ -70,44 +66,24 @@ namespace HealthyLifeApp.ViewModels
             
         }
 
-        async void ExecuteStartLocation()
-        {
+        async void ExecuteStartLocation() {
+        
             var location = await Geolocation.GetLastKnownLocationAsync();
 
             var latitude = location.Latitude;
             var longitude = location.Longitude;
             startLocation = new Location(latitude, longitude);
-
-
-            _startTime = DateTime.Now;
-            
+            _startTime = DateTime.Now; 
             Device.StartTimer(new TimeSpan(0, 0, 1), TimerTick);
             await _pageDialog.DisplayAlertAsync("Hey", "Your exercise time begins now", "Ok");
-
-
-
         }
-        void ExecuteGetDistance()
-        {
-
-            
-           
-
-
-            
-
-           
-        }
+       
         public ExerciseViewModel(INavigationService navigationService, IPageDialogService pageDialog)
         {
             NavigationService = navigationService;
             var activity = new Exercises();
             _pageDialog = pageDialog;
-            //  var loc = new Location();
-            //   loc = Location;
             Exercise = activity;
-
-           
 
         }
 
