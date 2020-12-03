@@ -28,8 +28,6 @@ namespace HealthyLifeApp.ViewModels
             var uri = "http://10.0.2.2:5000/UserLoginDetails";
             var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
             var http = new HttpClient();
-
-            //var postToApi = htt
         }
         public JournalViewModel(INavigationService navigationService, IPageDialogService pageDialog)
         {
